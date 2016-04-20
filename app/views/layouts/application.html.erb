@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShowTime</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="margin: 0px;">
+
+  <div id="wrapper">
+    <%= render partial: "layouts/side_bar" %>
+    <div class="container" style="width: 100% !important; padding-left: 0px;padding-right: 0px;">
+      <%= yield %>
+    </div>
+    <div class="push"></div>
+  </div>
+</body>
+</html>
