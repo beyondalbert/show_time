@@ -2,7 +2,7 @@
   <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 </button>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -34px;">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1" class=""></li>
@@ -41,6 +41,77 @@
   <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div><!-- /.carousel -->
+
+<div class="floor01">
+  <div class="box">
+    <div class="right">
+      <h1>相机，专为骑行</h1>
+      <p>Camile支持1080p30、720p60录像，</p>
+      <p>配以140°广角镜头和电子防抖，</p>
+      <p>轻松应对各种复杂骑行环境，</p>
+      <p>让您不丢失每一个精彩瞬间。</p>
+      <p><a href="/index.php/camile/camera">进一步了解相机 &gt;</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="floor02">
+  <div class="box">
+    <ul>
+      <li class="wow fadeInUpFast animated animated" style="visibility: visible; animation-name: fadeInUpFast;">
+      <div class="picbox">
+        <span class="span1">
+          <%= image_tag "floor02_01.png" %>
+        </span>
+        <a>1080P/720P</a>
+      </div>
+      </li>
+      <li class="wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
+      <div class="picbox">
+        <span class="span2">
+          <%= image_tag "floor02_02.png" %>
+        </span>
+        <a>140°广角镜头</a>
+      </div>
+      </li>
+      <li class="wow fadeInUpSlow animated animated" style="visibility: visible; animation-name: fadeInUpSlow;">
+      <div class="picbox">
+        <span class="span3">
+          <%= image_tag "floor02_03.png" %>
+        </span>
+        <a>电子防抖</a>
+      </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="floor03">
+  <div class="box">
+    <div class="top">
+      <h1>GPS码表，精准高效</h1>
+      <p>Camile采用GPS、6轴运动和高度计等传感器，</p><p>优化的硬件设计实现GPS快速定位，加上先进的融合算法，</p>
+      <p>实现3个维度的精准定位，让您的骑行无需等待。</p>
+      <p><a href="/index.php/camile/gps">进一步了解GPS码表 &gt;</a></p>
+    </div>
+    <div class="bottom">
+      <ul>
+        <li id="li1" class="translateRightBig wow animated" style="visibility: visible; animation-name: translateRightBigTo;">
+        <img src="/Public/Images/m_1.png">
+        </li>
+        <li id="li2" class="translateRight wow animated" style="visibility: visible; animation-name: translateRightTo;">
+        <img src="/Public/Images/m_2.png">
+        </li>
+        <li id="li3" class="translateRightSlow wow animated" style="visibility: visible; animation-name: translateRightSlowTo;">
+        <img src="/Public/Images/m_3.png">
+        </li>
+        <li id="li4" class="animated translateLeft wow" style="visibility: visible; animation-name: translateLeftTo;">
+        <img src="/Public/Images/m_4.png">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <script>
 $("#menu-toggle").click(function(e) {
