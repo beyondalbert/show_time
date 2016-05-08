@@ -30,7 +30,6 @@
 
 .footer {
   position: relative;
-  // height: 140px;
   background-color: #222;
 }
 .footer .container {
@@ -48,4 +47,13 @@
 }
 .feedback {
   font-size: 16px;
+}
+
+.navbar-inverse {
+  background: transparent;
+  border: none !important;
+} 
+
+.navbar-inverse a {
+  color: #fff !important;
 }

@@ -113,7 +113,7 @@
     </div>
     <div class="right col-md-6">
       <ul>
-        <li id="li1" style="width: 535px; display: list-item;">
+        <li id="li1" style="display: list-item;">
         <div class="textbox1" style="display: block;">
           <span id="span1">
             <a id="num1" class="num">3</a>
@@ -122,7 +122,7 @@
           <span id="span2">连续拍摄</span>
         </div>
         </li>
-        <li id="li2" style="width: 535px; display: list-item;">
+        <li id="li2" style="display: list-item;">
         <div class="textbox2" style="display: block;">
           <span id="span1">
             <a id="num2" class="num">16</a>
@@ -131,7 +131,7 @@
           <span id="span2">GPS码表独立工作</span>
         </div>
         </li>
-        <li id="li3" style="width: 535px; display: list-item;">
+        <li id="li3" style="display: list-item;">
         <div class="textbox3" style="display: block;">
           <span id="span1">
             <a id="num3" class="num">8</a>
@@ -212,8 +212,27 @@
       </div>
       <div class="col-md-4">
         <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block" %>
-        <span id="black">漠河·一路向北</span
+        <span id="black">漠河·一路向北</span>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('.floor01');
+   var offset = startchange.offset();
+    if (startchange.length){
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $(".navbar-inverse").css('background-color', '#222');
+       } else {
+          $('.navbar-inverse').css('background-color', 'transparent');
+          $('.navbar-inverse').css('border', 'none !important');
+       }
+   });
+    }
+    });
+</script>

@@ -51,7 +51,6 @@
 }
 
 .floor03 .box {
-  height: 920px;
   margin: 0 auto;
 }
 
@@ -107,7 +106,7 @@
   position: relative;
 }
 .floor04 .box .left {
-  margin-top: 13%;
+  margin-top: 10%;
 }
 .floor04 .box .left h1 {
   color: white;
@@ -116,15 +115,18 @@
   color: #666;
 }
 .floor04 .box .right {
-  margin-top: 13%;
+  margin-top: 10%;
   overflow: hidden;
   background-image: image-url('floor04_01.png');
   background-repeat: no-repeat;
-  background-position: left 0;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 20px;
 }
 .floor04 .box .right ul {
   width: 100%;
   padding-left: 0px;
+  padding-right: 10%;
 }
 .floor04 .box .right ul li {
   margin-bottom: 50px;
@@ -144,7 +146,7 @@
   background: linear-gradient(to right, rgba(0, 143, 207, 0) 45%, #008fcf 100%);
 }
 .floor04 .box .right ul .textbox1 {
-  margin-left: 400px;
+  margin-left: 60%;
   width: 200px;
   height: 60px;
 }
@@ -154,11 +156,11 @@
   color: #fff;
 }
 .floor04 .box .right ul li .textbox2 {
-  width: 200px;
+  width: 30%;
   height: 60px;
 }
 .floor04 .box .right ul li .textbox3 {
-  margin-left: 225px;
+  margin-left: 10%;
   width: 200px;
   height: 60px;
 }
@@ -214,12 +216,11 @@
 .floor06 {
   width: 100%;
   background-size: cover;
-  background-image: image-url('floor06_04.jpg');
+   background-image: image-url('floor06_04.jpg');
   background-repeat: no-repeat;
   background-position: center center;
 }
 .floor06 .box {
-  // width: 1170px;
   height: 100%;
   margin: 0 auto;
 }
