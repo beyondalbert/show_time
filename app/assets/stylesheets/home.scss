@@ -7,7 +7,7 @@
 .floor01 {
   width: 100%;
   height: 800px;
-  background-image: url("bg1.jpg");
+  background-image: image-url("bg1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -118,7 +118,7 @@
 .floor04 .box .right {
   margin-top: 13%;
   overflow: hidden;
-  background-image: url('floor04_01.png');
+  background-image: image-url('floor04_01.png');
   background-repeat: no-repeat;
   background-position: left 0;
 }
@@ -214,7 +214,7 @@
 .floor06 {
   width: 100%;
   background-size: cover;
-  background-image: url('floor06_04.jpg');
+  background-image: image-url('floor06_04.jpg');
   background-repeat: no-repeat;
   background-position: center center;
 }
