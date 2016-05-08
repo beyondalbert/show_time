@@ -4,114 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Toggle Styles */
-
-#wrapper {
-  padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-  padding-left: 250px;
-}
-
-#sidebar-wrapper {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 0;
-  height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
-  background: #000;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
-}
-
-#page-content-wrapper {
-  width: 100%;
-  position: absolute;
-  padding: 15px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-  position: absolute;
-  margin-right: -250px;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidebar-nav li {
-  text-indent: 20px;
-  line-height: 40px;
-}
-
-.sidebar-nav li a {
-  display: block;
-  text-decoration: none;
-  color: #999999;
-}
-
-.sidebar-nav li a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-  text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  font-size: 18px;
-  line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-  color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
-}
-
-.footer {
-  color: #999;
-  position: absolute;
-  bottom: 10px;
-  font-size: 12px;
-  text-align: center;
-  width: 250px;
-}
-
-.footer .copyright {
-}
-
-.footer .contact {
-  margin: 10px 0px;
-}
-
 .floor01 {
   width: 100%;
   height: 800px;
@@ -143,27 +35,10 @@
 .floor02 .box {
   height: 260px;
   margin: 0 auto;
-  margin-top: -10px;
+  padding-top: 60px;
 }
 
-.floor02 .box ul li {
-  width: 33.33%;
-  height: 260px;
-  float: left;
-  position: relative;
-}
-
-.floor02 .box ul li .picbox {
-  width: 170px;
-  position: absolute;
-  left: 50%;
-  margin-left: -85px;
-  top: 50%;
-  margin-top: -60px;
-  text-align: center;
-}
-
-.floor02 .box ul li .picbox a {
+.floor02 .box a {
   margin-top: 16px;
   font-size: 0.875em;
   color: #fff;
@@ -223,19 +98,15 @@
 }
 
 .floor04 {
-  height: 700px;
   background-color: #333;
   overflow: hidden;
 }
 .floor04 .box {
-  width: 1170px;
   height: 100%;
   margin: 0 auto;
   position: relative;
 }
 .floor04 .box .left {
-  float: left;
-  width: 40%;
   margin-top: 13%;
 }
 .floor04 .box .left h1 {
@@ -245,9 +116,6 @@
   color: #666;
 }
 .floor04 .box .right {
-  width: 60%;
-  height: 60%;
-  float: right;
   margin-top: 13%;
   overflow: hidden;
   background-image: url('floor04_01.png');
@@ -303,7 +171,6 @@
 }
 .floor05 .box {
   text-align: center;
-  width: 1000px;
   height: 1000px;
   margin: 0 auto;
   position: relative;
@@ -346,14 +213,13 @@
 }
 .floor06 {
   width: 100%;
-  height: 738px;
   background-size: cover;
   background-image: url('floor06_04.jpg');
   background-repeat: no-repeat;
   background-position: center center;
 }
 .floor06 .box {
-  width: 1170px;
+  // width: 1170px;
   height: 100%;
   margin: 0 auto;
 }

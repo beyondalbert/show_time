@@ -52,33 +52,25 @@
 </div>
 
 <div class="floor02">
-  <div class="box">
-    <ul>
-      <li class="wow fadeInUpFast animated animated" style="visibility: visible; animation-name: fadeInUpFast;">
-      <div class="picbox">
-        <span class="span1">
-          <%= image_tag "floor02_01.png" %>
-        </span>
-        <a>1080P/720P</a>
-      </div>
-      </li>
-      <li class="wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;">
-      <div class="picbox">
-        <span class="span2">
-          <%= image_tag "floor02_02.png" %>
-        </span>
-        <a>140°广角镜头</a>
-      </div>
-      </li>
-      <li class="wow fadeInUpSlow animated animated" style="visibility: visible; animation-name: fadeInUpSlow;">
-      <div class="picbox">
-        <span class="span3">
-          <%= image_tag "floor02_03.png" %>
-        </span>
-        <a>电子防抖</a>
-      </div>
-      </li>
-    </ul>
+  <div class="box text-center">
+    <div class="col-xs-4">
+      <span class="span1">
+        <%= image_tag "floor02_01.png", class: "img-responsive center-block" %>
+      </span>
+      <a>1080P/720P</a>
+    </div>
+    <div class="col-xs-4">
+      <span class="span2">
+        <%= image_tag "floor02_02.png", class: "img-responsive center-block" %>
+      </span>
+      <a>140°广角镜头</a>
+    </div>
+    <div class="col-xs-4">
+      <span class="span3">
+        <%= image_tag "floor02_03.png", class: "img-responsive center-block" %>
+      </span>
+      <a>电子防抖</a>
+    </div>
   </div>
 </div>
 
@@ -93,16 +85,16 @@
     <div class="bottom">
       <ul>
         <li id="li1" class="translateRightBig wow animated" style="visibility: visible; animation-name: translateRightBigTo;">
-        <%= image_tag "floor03_01.png" %>
+        <%= image_tag "floor03_01.png", class: "img-responsive" %>
         </li>
         <li id="li2" class="translateRight wow animated" style="visibility: visible; animation-name: translateRightTo;">
-        <%= image_tag "floor03_02.png" %>
+        <%= image_tag "floor03_02.png", class: "img-responsive" %>
         </li>
         <li id="li3" class="translateRightSlow wow animated" style="visibility: visible; animation-name: translateRightSlowTo;">
-        <%= image_tag "floor03_03.png" %>
+        <%= image_tag "floor03_03.png", class: "img-responsive" %>
         </li>
         <li id="li4" class="animated translateLeft wow" style="visibility: visible; animation-name: translateLeftTo;">
-        <%= image_tag "floor03_04.png" %>
+        <%= image_tag "floor03_04.png", class: "img-responsive" %>
         </li>
       </ul>
     </div>
@@ -110,8 +102,8 @@
 </div>
 
 <div class="floor04">
-  <div class="box">
-    <div class="left">
+  <div class="box row">
+    <div class="left col-md-6">
       <h1>超大容量，从不错过</h1>
       <p>Camile整合1350mAh电池，可连续拍摄3小时，</p>
       <p>32G超大容量内存支持8小时连续拍摄，</p>
@@ -119,7 +111,7 @@
       <p>保证您的骑行无忧。</p>
       <!-- <p><a  href="">进一步了解容量 ></a></p> -->
     </div>
-    <div class="right">
+    <div class="right col-md-6">
       <ul>
         <li id="li1" style="width: 535px; display: list-item;">
         <div class="textbox1" style="display: block;">
@@ -209,29 +201,19 @@
       <a href="/index.php/video">查看更多视频 &gt;</a>
       </p>
     </div>
-    <div class="bottom">
-      <ul>
-        <li>
-        <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==" %>
+    <div class="bottom row text-center">
+      <div class="col-md-4">
+        <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block" %>
         <span id="black" style="bottom: 0px;">海口·浪漫日光之旅</span>
-        </li>
-        <li>
-        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf" %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block" %>
         <span id="black">杭州·西湖苏堤行</span>
-        </li>
-        <li style="margin-right: 0">
-        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf" %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block" %>
         <span id="black">漠河·一路向北</span
-        </li>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
-
-
-<script>
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-    });
-</script>

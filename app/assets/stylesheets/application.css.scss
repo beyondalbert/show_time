@@ -16,3 +16,36 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -140px;
+}
+
+.push {
+  height: 0px;
+}
+
+.footer {
+  position: relative;
+  // height: 140px;
+  background-color: #222;
+}
+.footer .container {
+  color: #999999;
+  padding: 10px 0px;
+  height: 100%;
+}
+
+.footer-div {
+  padding: 5px 0px;
+}
+
+.footer-div a {
+  color: #999;
+}
+.feedback {
+  font-size: 16px;
+}
