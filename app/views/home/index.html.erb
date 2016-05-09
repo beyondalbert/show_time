@@ -203,20 +203,34 @@
     </div>
     <div class="bottom row text-center">
       <div class="col-md-4">
-        <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block" %>
+        <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block video-pic" %>
         <span id="black" style="bottom: 0px;">海口·浪漫日光之旅</span>
       </div>
       <div class="col-md-4">
-        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block" %>
+        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block video-pic" %>
         <span id="black">杭州·西湖苏堤行</span>
       </div>
       <div class="col-md-4">
-        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block" %>
+        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block video-pic" %>
         <span id="black">漠河·一路向北</span>
       </div>
     </div>
   </div>
 </div>
+
+<div id="video-show" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <iframe id="video-content" width="100%" height="200px" src="http://player.youku.com/embed/XMTU1MjQ0MTcyOA==" frameborder=0 allowfullscreen></iframe>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script>
 $(document).ready(function(){       
@@ -234,5 +248,11 @@ $(document).ready(function(){
        }
    });
     }
+    });
+
+$('.video-pic').click(function() {
+    $('#video-show').modal();
+    $('#video-show .modal-header h4').text($(this).next().text());
+  $('#video-content').attr('src', $(this).attr('data-src'))
     });
 </script>
