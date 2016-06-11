@@ -1,3 +1,13 @@
+<style>
+.navbar-inverse {
+  background: transparent;
+  border: none !important;
+} 
+
+.navbar-inverse a {
+  color: #fff !important;
+}
+</style>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -198,21 +208,27 @@
       <h1>精彩视频</h1>
       <p>骑行的美好，Camile为您悉心记录。</p>
       <p>
-      <a href="/index.php/video">查看更多视频 &gt;</a>
+      <a data-no-turbolink='true' href="/videos">查看更多视频 &gt;</a>
       </p>
     </div>
     <div class="bottom row text-center">
       <div class="col-md-4">
-        <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block video-pic" %>
-        <span id="black" style="bottom: 0px;">海口·浪漫日光之旅</span>
+        <div class="video-box">
+          <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block video-pic" %>
+          <span>海口·浪漫日光之旅</span>
+        </div>
       </div>
       <div class="col-md-4">
-        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block video-pic" %>
-        <span id="black">杭州·西湖苏堤行</span>
+        <div class="video-box">
+          <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block video-pic" %>
+          <span>杭州·西湖苏堤行</span>
+        </div>
       </div>
       <div class="col-md-4">
-        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block video-pic" %>
-        <span id="black">漠河·一路向北</span>
+        <div class="video-box">
+          <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block video-pic" %>
+          <span>漠河·一路向北</span>
+        </div>
       </div>
     </div>
   </div>
@@ -237,6 +253,7 @@ $(document).ready(function(){
    var scroll_start = 0;
    var startchange = $('.floor01');
    var offset = startchange.offset();
+
     if (startchange.length){
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
