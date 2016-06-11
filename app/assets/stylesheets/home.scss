@@ -262,3 +262,66 @@
   height: 30px;
   line-height: 30px;
 }
+
+.about-page p {
+  padding: 0px 20px 0px 30px;
+  font-size: 16px;
+}
+.about-head {
+  background-image: image-url("about_us.jpg");
+  background-position: top center;
+  height: 700px;
+}
+.team-desc {
+  float: right;
+  margin-top: 180px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+.about-content-1 {
+  height: 500px;
+  background-color: #f3f3f3;
+  margin-top: -20px;
+}
+.about-content-1 .container {
+  padding-top: 150px;
+}
+.about-content-2 {
+  height: 500px;
+}
+.about-content-2 .container {
+  padding-top: 150px;
+}
+
+.join-head {
+  background-image: image-url('join_us.jpg');
+  background-position: top center;
+  height: 600px;
+}
+.join-desc {
+  background-color: rgba(255, 255, 255, 0.5);
+  float: left;
+  margin-top: 150px;
+}
+.join-mail {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+}
+.join-head p {
+  padding: 0px 20px 0px 30px;
+  font-size: 16px;
+}
+
+.jobs-head {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.join-jobs .panel-heading {
+  cursor: pointer;
+}
+.join-jobs .panel-body {
+  display: none;
+}

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root :to => "home#index" 
+  get 'about' => "home#about", :as => "about"
+  get 'join' => "home#join", :as => "join"
   resources :news
   resources :videos
   # The priority is based upon order of creation: first created -> highest priority.
