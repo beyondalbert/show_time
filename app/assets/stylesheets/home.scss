@@ -7,7 +7,7 @@
 .floor01 {
   width: 100%;
   height: 800px;
-  background-image: image-url("bg1.png");
+  background-image: image-url("bg1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -26,6 +26,8 @@
   top: 50%;
   margin-top: -210px;
   overflow: hidden;
+  background-color: rgba(255,255,255,0.5);
+  padding: 15px;
 }
 
 .floor02 {
@@ -311,7 +313,7 @@
   color: white;
 }
 .join-head p {
-  padding: 0px 20px 0px 30px;
+  padding: 10px 20px 10px 30px;
   font-size: 16px;
 }
 

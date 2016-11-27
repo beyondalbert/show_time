@@ -11,38 +11,20 @@
 <div class="video-body container">
   <div class="col-md-4 text-center">
     <div class="video-box">
-      <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block video-pic" %>
-      <span>海口·浪漫日光之旅</span>
+      <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTgyMjEwNzU0MA==", class: "img-responsive center-block video-pic" %>
+      <span>智鹍宣传片02</span>
     </div>
   </div>
   <div class="col-md-4 text-center">
     <div class="video-box">
-      <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block video-pic" %>
-      <span>杭州·西湖苏堤行</span>
+      <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/embed/XMTgyNTA2MDA0NA==", class: "img-responsive center-block video-pic" %>
+      <span>杭州智鹍科技有限公司样片</span>
     </div>
   </div>
   <div class="col-md-4 text-center">
     <div class="video-box">
-      <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block video-pic" %>
-      <span>漠河·一路向北</span>
-    </div>
-  </div>
-  <div class="col-md-4 text-center">
-    <div class="video-box">
-      <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTQ0MDA2MDM0MA==", class: "img-responsive center-block video-pic" %>
-      <span>海口·浪漫日光之旅</span>
-    </div>
-  </div>
-  <div class="col-md-4 text-center">
-    <div class="video-box">
-      <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XMTM2NzQ5NDU4NA==/v.swf", class: "img-responsive center-block video-pic" %>
-      <span>杭州·西湖苏堤行</span>
-    </div>
-  </div>
-  <div class="col-md-4 text-center">
-    <div class="video-box">
-      <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/player.php/sid/XNzk5MTEwNTY0/v.swf", class: "img-responsive center-block video-pic" %>
-      <span>漠河·一路向北</span>
+      <%= image_tag "floor06_03.jpg", 'data-src' => "http://player.youku.com/embed/XMTYxNzAwNTI3Mg==", class: "img-responsive center-block video-pic" %>
+      <span>智鹍宣传片</span>
     </div>
   </div>
 </div>
@@ -55,15 +37,18 @@
         <h4 class="modal-title">Modal title</h4>
       </div>
       <div class="modal-body">
-        <iframe id="video-content" width="100%" height="200px" src="http://player.youku.com/embed/XMTU1MjQ0MTcyOA==" frameborder=0 allowfullscreen></iframe>
+        <iframe id="video-content" width="100%" height="200px" src="" frameborder=0 'allowfullscreen'></iframe>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <script type="text/javascript">
 $('.video-pic').click(function() {
-    $('#video-show').modal();
-    $('#video-show .modal-header h4').text($(this).next().text());
+  $('#video-show').modal();
+  $('#video-show .modal-header h4').text($(this).next().text());
   $('#video-content').attr('src', $(this).attr('data-src'))
-    });
+});
+$('#video-show').on('hidden.bs.modal', function(e) {
+  $('#video-content').attr('src', '');
+})
 </script>
