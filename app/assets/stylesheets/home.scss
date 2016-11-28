@@ -265,13 +265,16 @@
   font-size: 16px;
 }
 .about-head {
-  background-image: image-url("about_us.jpg");
-  background-position: top center;
-  height: 700px;
+  width: 100%;
 }
 .team-desc {
-  float: right;
-  margin-top: 180px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  padding: 20px;
+}
+.team-desc-phone {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
 }
@@ -291,24 +294,24 @@
 }
 
 .join-head {
-  background-image: image-url('join_us.jpg');
-  background-position: top center;
-  height: 600px;
 }
 .join-desc {
   background-color: rgba(255, 255, 255, 0.5);
-  float: left;
-  margin-top: 150px;
+  position: absolute;
+  top: 200px;
+}
+.join-desc-phone {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .join-mail {
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 0px;
-  height: 50px;
+  height: 60px;
   line-height: 50px;
   color: white;
 }
 .join-head p {
-  padding: 10px 20px 10px 30px;
+  padding: 10px 20px 10px 20px;
   font-size: 16px;
 }
 
