@@ -1,13 +1,3 @@
-<style>
-.navbar-inverse {
-  background: transparent;
-  border: none !important;
-} 
-
-.navbar-inverse a {
-  color: #fff !important;
-}
-</style>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -48,185 +38,64 @@
   <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div><!-- /.carousel -->
 
-<div class="floor01">
-  <div class="box">
-    <%= image_tag "bg1.jpg", class: "img-responsive center-block" %>
-    <div class="right visible-lg-block">
-      <h1>桥梁检测</h1>
-      <p>装备简单</p>
-      <p>控制灵活</p>
-      <p>图像识别，精准检测</p>
+<div class="floor">
+  <div class="floor-head">
+    <h2>商业应用</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= image_tag "app01.jpeg", class: "img-responsive center-block" %>
+    </div>
+    <div class="col-sm-6">
+      <%= image_tag "app02.jpeg", class: "img-responsive center-block" %>
     </div>
   </div>
 </div>
 
-<div class="floor02">
-  <div class="box text-center">
-    <div class="col-xs-4">
-      <span class="span1">
-        <%= image_tag "floor02_01.png", class: "img-responsive center-block" %>
-      </span>
-      <a>1080P/720P</a>
+<div class="floor">
+  <div class="floor-head">
+    <h2>精彩视频</h2>
+    <a data-no-turbolink='true' href="/videos">查看更多视频 &gt;</a>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="video-box">
+        <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTgyMjEwNzU0MA==", class: "img-responsive center-block video-pic" %>
+        <span>智鹍宣传片02</span>
+      </div>
     </div>
-    <div class="col-xs-4">
-      <span class="span2">
-        <%= image_tag "floor02_02.png", class: "img-responsive center-block" %>
-      </span>
-      <a>140°广角镜头</a>
+    <div class="col-md-4">
+      <div class="video-box">
+        <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/embed/XMTgyNTA2MDA0NA==", class: "img-responsive center-block video-pic" %>
+        <span>杭州智鹍科技有限公司样片</span>
+      </div>
     </div>
-    <div class="col-xs-4">
-      <span class="span3">
-        <%= image_tag "floor02_03.png", class: "img-responsive center-block" %>
-      </span>
-      <a>电子防抖</a>
+    <div class="col-md-4">
+      <div class="video-box">
+        <%= image_tag "floor06_03.jpg", 'data-src' => "http://player.youku.com/embed/XMTYxNzAwNTI3Mg==", class: "img-responsive center-block video-pic" %>
+        <span>智鹍宣传片</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- <div class="floor03">
-  <div class="box">
-    <div class="top">
-      <h1>GPS码表，精准高效</h1>
-      <p>Camile采用GPS、6轴运动和高度计等传感器，</p><p>优化的硬件设计实现GPS快速定位，加上先进的融合算法，</p>
-      <p>实现3个维度的精准定位，让您的骑行无需等待。</p>
-      <p><a href="#">进一步了解GPS码表 &gt;</a></p>
+<div class="floor-bottom">
+  <div class="floor-head" style="text-align: left;">
+    <h2>精彩活动</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="col-xs-8">
+        <%= image_tag "activity.jpeg", class: "img-responsive center-block" %>
+      </div>
+      <div class="col-xs-4">
+      </div>
     </div>
-    <div class="bottom">
-      <ul>
-        <li id="li1" class="translateRightBig wow animated" style="visibility: visible; animation-name: translateRightBigTo;">
-        <%= image_tag "floor03_01.png", class: "img-responsive" %>
-        </li>
-        <li id="li2" class="translateRight wow animated" style="visibility: visible; animation-name: translateRightTo;">
-        <%= image_tag "floor03_02.png", class: "img-responsive" %>
-        </li>
-        <li id="li3" class="translateRightSlow wow animated" style="visibility: visible; animation-name: translateRightSlowTo;">
-        <%= image_tag "floor03_03.png", class: "img-responsive" %>
-        </li>
-        <li id="li4" class="animated translateLeft wow" style="visibility: visible; animation-name: translateLeftTo;">
-        <%= image_tag "floor03_04.png", class: "img-responsive" %>
-        </li>
+    <div class="col-md-6">
+      <ul class="activities-list">
+        <li> 2016-08-27 | 浙西之游</li>
+        <li> 2016-08-18 | 区科技局领导莅临我司指导工作</li>
       </ul>
-    </div>
-  </div>
-</div>
-
-<div class="floor04">
-  <div class="box row">
-    <div class="left col-md-6">
-      <h1>超大容量，从不错过</h1>
-      <p>Camile整合1350mAh电池，可连续拍摄3小时，</p>
-      <p>32G超大容量内存支持8小时连续拍摄，</p>
-      <p>GPS码表独立工作可达16小时，</p>
-      <p>保证您的骑行无忧。</p>
-    </div>
-    <div class="right col-md-6">
-      <ul>
-        <li id="li1" style="display: list-item;">
-        <div class="textbox1" style="display: block;">
-          <span id="span1">
-            <a id="num1" class="num">3</a>
-            <a>小时</a>
-          </span>
-          <span id="span2">连续拍摄</span>
-        </div>
-        </li>
-        <li id="li2" style="display: list-item;">
-        <div class="textbox2" style="display: block;">
-          <span id="span1">
-            <a id="num2" class="num">16</a>
-            <a>小时</a>
-          </span>
-          <span id="span2">GPS码表独立工作</span>
-        </div>
-        </li>
-        <li id="li3" style="display: list-item;">
-        <div class="textbox3" style="display: block;">
-          <span id="span1">
-            <a id="num3" class="num">8</a>
-            <a>小时</a>
-          </span>
-          <span id="span2">视频存储</span>
-        </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="floor05">
-  <div class="box">
-    <div class="top">
-      <h1>还有么？</h1>
-      <p>Camile 内置蓝牙4.0模块，支持来电提醒，</p>
-      <p>未来的可能，期待与您一起探索。</p>
-    </div>
-    <div class="middle">
-      <ul>
-        <li class="wow animated" style="visibility: visible;">
-        <div class="picbox">
-          <span class="span1">
-            <%= image_tag "floor05_01.png" %>
-          </span>
-          <a>内置蓝牙4.0</a>
-        </div>
-        </li>
-        <li class="wow animated" style="visibility: visible;">
-        <div class="picbox">
-          <span class="span2">
-            <%= image_tag "floor05_02.png" %>
-          </span>
-          <a>来电提醒</a>
-        </div>
-        </li>
-        <li class="wow animated" style="visibility: visible;">
-        <div class="picbox">
-          <span class="span4">
-            <%= image_tag "floor05_03.png" %>
-          </span>
-          <a>更多</a>
-        </div>
-        </li>
-      </ul>
-    </div>
-    <div class="bottom">
-      <div>
-        <%= image_tag "floor05_04.png", class: "wow bounce infinite animated", style: "visibility: visible; animation-name: bounce;" %>
-      </div>
-      <div style="margin-top: 30px">
-        <%= image_tag "floor05_05.png" %>
-      </div>
-    </div>
-  </div>
-</div>-->
-
-<div class="floor06">
-  <div class="box">
-    <div class="top">
-      <h1>精彩视频</h1>
-      <p>更加高效的桥梁检测方式</p>
-      <p>
-      <a data-no-turbolink='true' href="/videos">查看更多视频 &gt;</a>
-      </p>
-    </div>
-    <div class="bottom row text-center">
-      <div class="col-md-4">
-        <div class="video-box">
-          <%= image_tag "floor06_01.jpg", 'data-src' => "http://player.youku.com/embed/XMTgyMjEwNzU0MA==", class: "img-responsive center-block video-pic" %>
-          <span>智鹍宣传片02</span>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="video-box">
-          <%= image_tag "floor06_02.jpg", 'data-src' => "http://player.youku.com/embed/XMTgyNTA2MDA0NA==", class: "img-responsive center-block video-pic" %>
-          <span>杭州智鹍科技有限公司样片</span>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="video-box">
-          <%= image_tag "floor06_03.jpg", 'data-src' => "http://player.youku.com/embed/XMTYxNzAwNTI3Mg==", class: "img-responsive center-block video-pic" %>
-          <span>智鹍宣传片</span>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -246,24 +115,6 @@
 </div><!-- /.modal -->
 
 <script>
-$(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('.floor01');
-   var offset = startchange.offset();
-
-    if (startchange.length){
-   $(document).scroll(function() { 
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $(".navbar-inverse").css('background-color', '#222');
-       } else {
-          $('.navbar-inverse').css('background-color', 'transparent');
-          $('.navbar-inverse').css('border', 'none !important');
-       }
-   });
-    }
-    });
-
 $('.video-pic').click(function() {
   $('#video-show').modal();
   $('#video-show .modal-header h4').text($(this).next().text());
