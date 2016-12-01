@@ -7,7 +7,6 @@
 .floor-head {
   border-bottom: 1px solid #bbb;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .floor-head a {
@@ -106,4 +105,18 @@
 }
 .join-jobs .panel-body {
   display: none;
+}
+
+.last-activity-head p {
+  height: 45px;
+  font-size: 30px;
+  margin: 10px 0px 10px 30px;
+  color: #999;
+}
+.activities-list li {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  margin: 10px 0px;
+  list-style-type: none;
 }
