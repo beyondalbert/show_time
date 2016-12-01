@@ -5,9 +5,13 @@
  */
 
 .floor-head {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid black;
   text-align: center;
   margin-bottom: 10px;
+  h2{
+    font-size: 20px;
+    font-family: "Noto Sans CJK TC Light";
+  }
 }
 
 .floor-head a {
@@ -106,4 +110,33 @@
 }
 .join-jobs .panel-body {
   display: none;
+}
+/*
+ *商业应用 内容调整
+*/
+.col-sm-6-content{
+  position: absolute;       //title 显示
+  left :350px;
+  bottom: 5px;
+
+  color :white;             //设置字体
+  font-size: 16px;
+}
+/*
+ *精彩活动预览图 外边距调整
+*/
+.col-xs-8-img{
+  margin-left:-15px;        //图片左对齐
+}
+/*
+ *商业应用 外边距调整
+*/
+.row-margin{
+  margin-top :30px          //两个row之间产生一定间距
+}
+/*
+ *轮播图 外边距调整
+*/
+.myCarousel-margin{
+  margin :50px -85px auto   //调整Home的轮播图横向为全占,与topbar之间的外边距
 }
