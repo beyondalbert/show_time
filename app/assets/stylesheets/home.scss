@@ -7,7 +7,6 @@
 .floor-head {
   border-bottom: 1px solid black;
   text-align: center;
-  margin-bottom: 10px;
   h2{
     font-size: 20px;
     font-family: "Noto Sans CJK TC Light";
@@ -25,6 +24,10 @@
   border-bottom: 1px solid #bbb;
   margin-bottom: 20px;
   padding-bottom: 10px;
+}
+
+.commercial-app .col-sm-6 {
+  margin-top: 10px;
 }
 
 .video-pic {
@@ -115,7 +118,7 @@
 .last-activity-head p {
   height: 45px;
   font-size: 30px;
-  margin: 10px 0px 10px 30px;
+  margin: 10px 0px;
   color: #999;
 }
 .activities-list li {
@@ -130,27 +133,15 @@
  *商业应用 内容调整
 */
 .col-sm-6-content{
-  position: absolute;       //title 显示
-  left :350px;
-  bottom: 5px;
+  position: relative;       //title 显示
+  bottom: 25px;
   color :white;             //设置字体
   font-size: 16px;
-}
-/*
- *精彩活动预览图 外边距调整
-*/
-.col-xs-8-img{
-  margin-left:-15px;        //图片左对齐
-}
-/*
- *商业应用 外边距调整
-*/
-.row-margin{
-  margin-top: 30px;          //两个row之间产生一定间距
+  text-align: center;
 }
 /*
  *轮播图 外边距调整
 */
 .myCarousel-margin{
-  margin: 50px -85px auto;  //调整Home的轮播图横向为全占,与topbar之间的外边距
+  margin-top: 50px;  //调整Home的轮播图横向为全占,与topbar之间的外边距
 }
