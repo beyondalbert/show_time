@@ -21,11 +21,11 @@
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -140px;
+  margin: 0 auto -70px;
 }
 
 .push {
-  height: 0px;
+  height: 70px;
 }
 
 .footer {
@@ -47,5 +47,19 @@
 }
 .feedback {
   font-size: 16px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin input {
+  margin: 5px 0px;
+}
+
+.form-signin a {
+  float: right;
 }
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :admin do
     get 'dashboard/index'
   end
@@ -8,6 +9,13 @@ Rails.application.routes.draw do
   get 'join' => "home#join", :as => "join"
   resources :news
   resources :videos
+  resources :users
+  resources :sessions
+
+  get "login" => "sessions#new", :as => "login"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "signup" => "users#new", :as => "signup"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
