@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'dashboard/index'
+  end
+
   root :to => "home#index" 
   get 'about' => "home#about", :as => "about"
   get 'join' => "home#join", :as => "join"
