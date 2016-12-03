@@ -45,6 +45,13 @@
   height: 30px;
   line-height: 30px;
 }
+/*
+ *精彩视频头部 页面调整
+ */
+.video-head {
+  margin: 50px -65px;
+  font-size: 20px
+}
 
 .about-page p {
   padding: 0px 20px 0px 30px;
@@ -132,13 +139,13 @@
 /*
  *轮播图 外边距调整
  */
-.myCarousel-margin{
-  margin: 50px -85px auto;  //调整Home的轮播图横向为全占,与topbar之间的外边距
+.myCarousel-margin {
+  margin: 50px -85px auto;  //调整Home的轮播图横向为全占,与topbar之间的外边距 image 1920*837 px
 }
 /*
  *商业应用 内容调整
  */
-.col-sm-6 .content{
+.col-sm-6 .content {
   position: absolute;       //title 显示
   left: 450px;
   bottom: 5px;
@@ -148,29 +155,29 @@
 /*
  *精彩活动预览图 外边距调整
  */
-.col-md-6 .img{
+.col-md-6 .img {
   margin-left: -15px;       //图片左对齐
 }
 /*
  *商业应用 外边距调整
  */
-.floor .margin_auto{
+.floor .margin_auto {
   margin-top: 30px;         //两个row之间产生一定间距
 }
 /*
  *关于我们 公司介绍块调整
  */
-.about-page .company{
-  margin: 0px -65px auto;   //调整展示图片横向占比为全占 image 2300x1200 px
+.about-page .company {
+  margin: 0px -65px auto;   //调整展示图片横向占比为全占 image 2300*1200 px
 }
-.about-page .company .des h4{ //公司描述 title
+.about-page .company .des h4 { //公司描述 title
   padding: 0px 20px 0px 30px;
 }
 /*
  *公司描述块
  */
 .about-page .company .des{
-  top: 420px;               //公司描述 块位置调整
+  top: 400px;               //公司描述 块位置调整
 }
 
 
