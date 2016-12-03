@@ -48,6 +48,13 @@
   height: 30px;
   line-height: 30px;
 }
+/*
+ *精彩视频头部 页面调整
+ */
+.video-head {
+  margin: 50px -65px;
+  font-size: 20px
+}
 
 .about-page p {
   padding: 0px 20px 0px 30px;
@@ -83,11 +90,13 @@
 }
 
 .join-head {
+  margin: 0px -75px auto;   //调整展示图片横向占比为全占
 }
 .join-desc {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: 200px;
+  top: 80px;
+  left: 30px;
 }
 .join-desc-phone {
   background-color: rgba(255, 255, 255, 0.5);
@@ -110,11 +119,13 @@
 }
 .join-jobs .panel-heading {
   cursor: pointer;
+  text-align: center;                     //职位title调整
+  font-family: "Noto Sans CJK TC Light";
+  font-size: 20px;
 }
 .join-jobs .panel-body {
   display: none;
 }
-
 .last-activity-head p {
   height: 45px;
   font-size: 30px;
@@ -130,6 +141,12 @@
 }
 
 /*
+ *轮播图 外边距调整
+ */
+.myCarousel-margin {
+  margin: 50px auto;  //调整Home的轮播图横向为全占,与topbar之间的外边距 image 1920*837 px
+}
+/*
  *商业应用 内容调整
 */
 .col-sm-6-content{
@@ -139,9 +156,36 @@
   font-size: 16px;
   text-align: center;
 }
+
 /*
- *轮播图 外边距调整
-*/
-.myCarousel-margin{
-  margin-top: 50px;  //调整Home的轮播图横向为全占,与topbar之间的外边距
+ *精彩活动预览图 外边距调整
+ */
+.col-md-6 .img {
+  margin-left: -15px;       //图片左对齐
 }
+/*
+ *商业应用 外边距调整
+ */
+.floor .margin_auto {
+  margin-top: 30px;         //两个row之间产生一定间距
+}
+/*
+ *关于我们 公司介绍块调整
+ */
+.about-page .company {
+  margin: 0px -75px auto;   //调整展示图片横向占比为全占 image 2300*1200 px
+}
+.about-page .company .des h4 { //公司描述 title
+  padding: 0px 20px 0px 30px;
+}
+/*
+ *公司描述块
+ */
+.about-page .company .des{
+  top: 400px;               //公司描述 块位置调整
+}
+
+
+
+
+
