@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   namespace :admin do
     get 'dashboard/index'
+    resources :activities
   end
 
   root :to => "home#index" 
   get 'about' => "home#about", :as => "about"
   get 'join' => "home#join", :as => "join"
-  resources :news
-  resources :videos
   resources :users
   resources :sessions
 

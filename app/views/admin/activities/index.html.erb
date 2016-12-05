@@ -1,0 +1,16 @@
+<h1 class="page-header">新闻稿列表</h1>
+<%= link_to "新建新闻稿", new_admin_activity_path, 'data-no-turbolink' => true %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>新闻标题</th>
+      <th>新闻标题配图</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<%= render partial: 'activities', locals: {activities: @activities} %>
+  </tbody>
+</table>

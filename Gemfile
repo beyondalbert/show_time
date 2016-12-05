@@ -50,3 +50,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'unicorn'
 gem 'mysql2', '~> 0.3.18'
 gem 'bcrypt'
+
+gem 'ckeditor'
+gem 'paperclip'

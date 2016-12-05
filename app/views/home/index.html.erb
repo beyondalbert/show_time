@@ -97,13 +97,13 @@
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-8">
-          <%= image_tag "activity_show.jpg", class: "img-responsive center-block" %>
+          <%= image_tag @last_activity.picture.url(:medium), class: "img-responsive center-block" %>
         </div>
         <div class="col-md-4 last-activity-head">
           <div class="visible-lg-block">
-            <p>2016</p>
-            <p style="font-size: 40px;color: #000;margin-bottom: 20px; ">08 | 27</p>
-            <p>浙西之游</p>
+            <p><%= @last_activity.happen_time.year %></p>
+            <p style="font-size: 40px;color: #000;margin-bottom: 20px; "><%= @last_activity.happen_time.strftime("%m | %d") %></p>
+            <p><%= truncate(@last_activity.title, length: 6) %></p>
           </div>
           <div class="hidden-lg" style="text-align: center;">
             <p>浙西之游</p>
@@ -113,12 +113,14 @@
     </div>
     <div class="col-md-6">
       <ul class="activities-list visible-lg-block" style="padding-left: 0px;">
-        <li><a href="#">2016-08-27 | 浙西之游</a></li>
-        <li><a href="#">2016-08-18 | 区科技局领导莅临我司指导工作</a></li>
+        <% @activities.each do |a| %>
+          <li><a href="#"><%= a.happen_time.strftime("%F") + " | " + a.title %></a></li>
+        <%- end %>
       </ul>
       <ul class="activities-list hidden-lg" style="padding-left: 0px;">
-        <li><a href="#">2016-08-27 | 浙西之游</a></li>
-        <li><a href="#">2016-08-18 | 区科技局领导莅临...</a></li>
+        <% @activities.each do |a| %>
+          <li><a href="#"><%= truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25) %></a></li>
+        <%- end %>
       </ul>
     </div>
   </div>

@@ -1,0 +1,47 @@
+<h1 class="page-header">编辑新闻稿</h1>
+<%= form_tag(admin_activity_path(@activity.id), method: :put, multipart: true, class: "form-horizontal") do -%>
+	<div class="form-group">
+    <label class="col-sm-2 control-label">标题：</label>
+    <div class="col-sm-8">
+      <%= text_field_tag 'activity[title]', @activity.title, placeholder: '标题', class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">发生日期：</label>
+    <div class="col-sm-4">
+      
+      <div class="input-append date form_datetime" >
+    		<%= text_field_tag 'activity[happen_time]', @activity.happen_time, class: "form-control" %>
+    		<span class="add-on"><i class="icon-remove"></i></span>
+    		<span class="add-on"><i class="icon-calendar"></i></span>
+			</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">新闻封面图片：</label>
+    <div class="col-sm-8">
+      <%= file_field_tag "activity[picture]", class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">正文：</label>
+    <div class="col-sm-8">
+      <%= cktext_area :activity, :description, cols: 40, row: 80, ckeditor: { uiColor: '#cccccc', toolbar: 'mini', language: 'zh-cn', height: '60vh' } %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <%= submit_tag 'Save', class: "btn btn-default" %>
+    </div>
+  </div>
+<% end -%>
+<script type="text/javascript">
+	$(".form_datetime").datetimepicker({
+        format: "yyyy-mm-dd",
+        autoclose: true,
+        todayBtn: true,
+        language: 'zh-CN',
+        minView: 2
+    });
+</script>

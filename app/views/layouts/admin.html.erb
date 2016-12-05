@@ -44,13 +44,13 @@
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar">
-          <li class="active"><a href="#">网站信息设置</a></li>
+          <li class="<%= params[:controller] == 'admin/dashboard' ? 'active' : ''%>"><a href="/admin/dashboard/index">网站信息设置</a></li>
           <li><a href="#">轮播图设置</a></li>
           <li><a href="#">首页产品内容设置</a></li>
           <li><a href="#">精彩视频设置</a></li>
         </ul>
         <ul class="nav nav-sidebar">
-          <li><a href="">新闻设置</a></li>
+          <li class="<%= params[:controller] == 'admin/activities' ? 'active' : ''%>"><a href="/admin/activities">新闻设置</a></li>
           <li><a href="">常规页面设置</a></li>
           <li><a href="">微信公众号集成</a></li>
         </ul>
