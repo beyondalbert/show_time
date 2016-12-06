@@ -43,19 +43,6 @@ ActiveRecord::Schema.define(version: 20161205133454) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
-  create_table "news", force: :cascade do |t|
-    t.string   "title",                limit: 255
-    t.text     "description",          limit: 65535
-    t.integer  "news_type",            limit: 4
-    t.datetime "happen_time"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-    t.string   "picture_file_name",    limit: 255
-    t.string   "picture_content_type", limit: 255
-    t.integer  "picture_file_size",    limit: 4
-    t.datetime "picture_updated_at"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "nickname",      limit: 255
     t.string   "phone",         limit: 255

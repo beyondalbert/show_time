@@ -1,0 +1,12 @@
+<ol class="breadcrumb" style="margin-top: 60px;" >
+  <li><%= link_to '精彩活动', activities_path %></li>
+  <li>正文</li>
+</ol>
+<div class="activity-show">
+  <div class="activity-title">
+		<h2><%= @activity.title %></h2>
+  </div>
+  <div class="activity-desc">
+		<%= raw @activity.description %>
+  </div>
+</div>

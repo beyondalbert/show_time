@@ -93,37 +93,39 @@
   <div class="floor-head" style="text-align: left;margin-bottom: 10px;">
     <h2>精彩活动</h2>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-8">
-          <%= image_tag @last_activity.picture.url(:medium), class: "img-responsive center-block" %>
-        </div>
-        <div class="col-md-4 last-activity-head">
-          <div class="visible-lg-block">
-            <p><%= @last_activity.happen_time.year %></p>
-            <p style="font-size: 40px;color: #000;margin-bottom: 20px; "><%= @last_activity.happen_time.strftime("%m | %d") %></p>
-            <p><%= truncate(@last_activity.title, length: 6) %></p>
+  <% if @last_activity %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-8">
+            <%= image_tag @last_activity.picture.url(:medium), class: "img-responsive center-block" %>
           </div>
-          <div class="hidden-lg" style="text-align: center;">
-            <p>浙西之游</p>
+          <div class="col-md-4 last-activity-head">
+            <div class="visible-lg-block">
+              <p><%= @last_activity.happen_time.year %></p>
+              <p style="font-size: 40px;color: #000;margin-bottom: 20px; "><%= @last_activity.happen_time.strftime("%m | %d") %></p>
+              <p><%= truncate(@last_activity.title, length: 6) %></p>
+            </div>
+            <div class="hidden-lg" style="text-align: center;">
+              <p>浙西之游</p>
+            </div>
           </div>
         </div>
       </div>
+      <div class="col-md-6">
+        <ul class="activities-list visible-lg-block" style="padding-left: 0px;">
+          <% @activities.each do |a| %>
+            <li><%= link_to a.happen_time.strftime("%F") + " | " + a.title, activity_path(a.id) %></li>
+          <%- end %>
+        </ul>
+        <ul class="activities-list hidden-lg" style="padding-left: 0px;">
+          <% @activities.each do |a| %>
+            <li><%= link_to truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25), activity_path(a.id) %>/li>
+          <%- end %>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-6">
-      <ul class="activities-list visible-lg-block" style="padding-left: 0px;">
-        <% @activities.each do |a| %>
-          <li><a href="#"><%= a.happen_time.strftime("%F") + " | " + a.title %></a></li>
-        <%- end %>
-      </ul>
-      <ul class="activities-list hidden-lg" style="padding-left: 0px;">
-        <% @activities.each do |a| %>
-          <li><a href="#"><%= truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25) %></a></li>
-        <%- end %>
-      </ul>
-    </div>
-  </div>
+  <%- end %>
 </div>
 
 <div id="video-show" class="modal fade">
