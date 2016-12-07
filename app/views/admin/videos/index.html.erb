@@ -1,0 +1,17 @@
+<h1 class="page-header">精彩视频列表</h1>
+<%= link_to "新建精彩视频", new_admin_video_path, 'data-no-turbolink' => true %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>标题</th>
+      <th>视频封面</th>
+      <th>视频链接</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<%= render partial: 'videos', locals: {videos: @videos} %>
+  </tbody>
+</table>

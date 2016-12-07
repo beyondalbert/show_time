@@ -1,0 +1,16 @@
+<% pictures.each do |p| %>
+	<tr>
+    <td><%= p.id %></td>
+    <td><%= p.title %></td>
+    <td><%= image_tag p.content.url(:medium) %></td>
+    <td><%= p.description %></td>
+    <td>
+    	<%= link_to(admin_picture_path(p.id), method: :delete) do %>
+      	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    	<% end %>
+    	<%= link_to(edit_admin_picture_path(p.id), 'data-no-turbolink' => true ) do %>
+      	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+    	<% end %>
+    </td>
+  </tr>
+<%- end %>

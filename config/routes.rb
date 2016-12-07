@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard/index'
     resources :activities
+    resources :videos
+    resources :pictures
   end
 
   root :to => "home#index" 
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :activities
+  get 'videos/index'
 
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"

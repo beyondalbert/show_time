@@ -1,0 +1,16 @@
+<% videos.each do |v| %>
+	<tr>
+    <td><%= v.id %></td>
+    <td><%= v.title %></td>
+    <td><%= image_tag v.cover.url(:medium) %></td>
+    <td><%= v.url %></td>
+    <td>
+    	<%= link_to(admin_video_path(v.id), method: :delete) do %>
+      	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    	<% end %>
+    	<%= link_to(edit_admin_video_path(v.id), 'data-no-turbolink' => true ) do %>
+      	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+    	<% end %>
+    </td>
+  </tr>
+<%- end %>
