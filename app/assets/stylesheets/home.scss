@@ -48,14 +48,6 @@
   height: 30px;
   line-height: 30px;
 }
-/*
- *精彩视频头部 页面调整
- */
-.video-head {
-  margin: 50px -65px;
-  font-size: 20px
-}
-
 .about-page p {
   padding: 0px 20px 0px 30px;
   font-size: 16px;
@@ -88,15 +80,12 @@
 .about-content-2 .container {
   padding-top: 150px;
 }
-
 .join-head {
-  margin: 0px -75px auto;   //调整展示图片横向占比为全占
 }
 .join-desc {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: 80px;
-  left: 30px;
+  top: 200px;
 }
 .join-desc-phone {
   background-color: rgba(255, 255, 255, 0.5);
@@ -119,9 +108,7 @@
 }
 .join-jobs .panel-heading {
   cursor: pointer;
-  text-align: center;                     //职位title调整
   font-family: "Noto Sans CJK TC Light";
-  font-size: 20px;
 }
 .join-jobs .panel-body {
   display: none;
@@ -148,11 +135,12 @@
 }
 /*
  *商业应用 内容调整
-*/
-.col-sm-6-content{
-  position: relative;       //title 显示
-  bottom: 25px;
-  color :white;             //设置字体
+ */
+.col-sm-6 .content {
+  position: absolute;       //title 显示
+  left: 350px;
+  bottom: 5px;
+  color: white;             //设置字体
   font-size: 16px;
   text-align: center;
 }
@@ -168,21 +156,6 @@
  */
 .floor .margin_auto {
   margin-top: 30px;         //两个row之间产生一定间距
-}
-/*
- *关于我们 公司介绍块调整
- */
-.about-page .company {
-  margin: 0px -75px auto;   //调整展示图片横向占比为全占 image 2300*1200 px
-}
-.about-page .company .des h4 { //公司描述 title
-  padding: 0px 20px 0px 30px;
-}
-/*
- *公司描述块
- */
-.about-page .company .des{
-  top: 400px;               //公司描述 块位置调整
 }
 
 
