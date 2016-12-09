@@ -53,12 +53,12 @@
   font-size: 16px;
 }
 .about-head {
-  width: 100%;
+  margin-top: 51px;
 }
 .team-desc {
   background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 400px;
+  position: relative;
+  margin-top: -320px;
   right: 0px;
   padding: 20px;
 }
@@ -81,11 +81,11 @@
   padding-top: 150px;
 }
 .join-head {
+  margin-top: 51px;
 }
 .join-desc {
   background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 200px;
+  margin-top: -550px;
 }
 .join-desc-phone {
   background-color: rgba(255, 255, 255, 0.5);
