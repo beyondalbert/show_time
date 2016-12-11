@@ -1,0 +1,22 @@
+<h1 class="page-header">
+  自定义页面设置
+  <%= link_to "新建自定义页面", new_admin_page_path, 'data-no-turbolink' => true %>
+</h1>
+
+<div class="setting-desc">
+  <p>各种自定义的页面设置</p>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>标题</th>
+      <th>父页面</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<%= render partial: 'pages', locals: {pages: @pages} %>
+  </tbody>
+</table>

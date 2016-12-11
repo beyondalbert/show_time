@@ -52,7 +52,7 @@
         <ul class="nav nav-sidebar">
           <li class="<%= params[:controller] == 'admin/activities' ? 'active' : ''%>"><a href="/admin/activities">新闻设置</a></li>
           <li class="<%= params[:controller] == 'admin/jobs' ? 'active' : ''%>"><a href="/admin/jobs">招聘岗位设置</a></li>
-          <li><a href="">常规页面设置</a></li>
+          <li class="<%= params[:controller] == 'admin/pages' ? 'active' : ''%>"><a href="/admin/pages">常规页面设置</a></li>
           <li><a href="">微信公众号集成</a></li>
         </ul>
       </div>

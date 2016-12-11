@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211052858) do
+ActiveRecord::Schema.define(version: 20161211104021) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title",                limit: 255
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20161211052858) do
     t.string   "title",      limit: 255
     t.text     "desc",       limit: 65535
     t.integer  "status",     limit: 4,     default: 1
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "desc",       limit: 65535
+    t.integer  "parent_id",  limit: 4,     default: 0
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
   end
