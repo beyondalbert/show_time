@@ -1,0 +1,30 @@
+<h1 class="page-header">
+  招聘岗位设置
+  <%= link_to "新建招聘岗位", new_admin_job_path, 'data-no-turbolink' => true %>
+</h1>
+
+<div class="join-jobs row">
+  <% @jobs.each do |j| %>
+    <div class="col-sm-6">
+      <div class="panel panel-default jobs-item">
+        <div class="panel-heading">
+          <%= "[" + (j.status == 1 ? '正在热招' : '招聘结束') + "]" + j.title %>
+          <div class="operate">
+    	      <%= link_to(admin_job_path(j.id), method: :delete) do %>
+            	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    	      <% end %>
+    	      <%= link_to(edit_admin_job_path(j.id), 'data-no-turbolink' => true ) do %>
+            	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+    	      <% end %>
+          </div>
+        </div>
+        <div class="panel-body" style="display: block;">
+          <h4>岗位职责</h4>
+          <% j.requirements.each do |r| %>
+            <p><%= r %></p>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  <% end -%>
+</div>

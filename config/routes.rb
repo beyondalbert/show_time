@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :activities
     resources :videos
     resources :pictures
+    resources :jobs
   end
 
   root :to => "home#index" 

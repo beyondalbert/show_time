@@ -1,0 +1,21 @@
+<h1 class="page-header">新建招聘岗位</h1>
+<%= form_tag(admin_jobs_path, method: :post, multipart: true, class: "form-horizontal") do -%>
+	<div class="form-group">
+    <label class="col-sm-2 control-label">岗位名称：</label>
+    <div class="col-sm-8">
+      <%= text_field_tag 'job[title]', '', placeholder: '标题', class: "form-control" %>
+    </div>
+  </div>
+	<div class="form-group">
+    <label class="col-sm-2 control-label">岗位要求：</label>
+    <div class="col-sm-8">
+      <%= text_area_tag 'job[desc]', '', placeholder: '岗位要求，每条要求换行并使用分号隔开', class: "form-control", rows: 10 %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <%= submit_tag '保存', class: "btn btn-default" %>
+    </div>
+  </div>
+<% end -%>

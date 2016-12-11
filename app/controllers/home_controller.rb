@@ -12,5 +12,6 @@ class HomeController < ApplicationController
   end
 
   def join
+    @jobs = Job.where(status: 1)
   end
 end
