@@ -1,22 +1,38 @@
 <div class="about-page">
   <div class="row">
-    <%= image_tag "us_01.jpg", class: "img-responsive center-block about-head" %>
-    <div class="team-desc visible-lg-block col-sm-offset-8">
-      <p>智鹍科技</p>
-      <p>--------------------------------------</p>
-      <p>专注于无人机应用领域的创新</p>
-      <p>未来将致力于空中机器人领域的技术研发与应用推广</p>
-      <p>目前处于初创期，欢迎各路英豪加入！</p>
-      <a data-no-turbolink='true' href= "/join" class="btn btn-primary btn-lg btn-block">加入我们</a>
-    </div>
-    <div class="team-desc-phone hidden-lg">
-      <p>智鹍科技</p>
-      <p>--------------------------------------</p>
-      <p>专注于无人机应用领域的创新</p>
-      <p>未来将致力于空中机器人领域的技术研发与应用推广</p>
-      <p>目前处于初创期，欢迎各路英豪加入！</p>
-      <a data-no-turbolink='true' href= "/join" class="btn btn-primary btn-lg btn-block">加入我们</a>
-    </div>
+    <% if @about_us_cover %>
+      <%= image_tag @about_us_cover.content.url, class: "img-responsive center-block about-head" %>
+      <div class="team-desc visible-lg-block col-sm-offset-8">
+        <% @about_us_cover.description.split(';').each do |d| %>
+          <p><%= d %></p>
+        <% end -%>
+        <a data-no-turbolink='true' href= "/join" class="btn btn-primary btn-lg btn-block">加入我们</a>
+      </div>
+      <div class="team-desc-phone hidden-lg">
+        <% @about_us_cover.description.split(';').each do |d| %>
+          <p><%= d %></p>
+        <% end -%>
+        <a data-no-turbolink='true' href= "/join" class="btn btn-primary btn-lg btn-block">加入我们</a>
+      </div>
+    <% else %>
+      <%= image_tag "about_us_default.jpg", class: "img-responsive center-block about-head" %>
+      <div class="team-desc visible-lg-block col-sm-offset-8">
+        <p>智鹍科技</p>
+        <p>--------------------------------------</p>
+        <p>专注于无人机应用领域的创新</p>
+        <p>未来将致力于空中机器人领域的技术研发与应用推广</p>
+        <p>目前处于初创期，欢迎各路英豪加入！</p>
+        <a data-no-turbolink='true' href= "/join" class="btn btn-primary btn-lg btn-block">加入我们</a>
+      </div>
+      <div class="team-desc-phone hidden-lg">
+        <p>智鹍科技</p>
+        <p>--------------------------------------</p>
+        <p>专注于无人机应用领域的创新</p>
+        <p>未来将致力于空中机器人领域的技术研发与应用推广</p>
+        <p>目前处于初创期，欢迎各路英豪加入！</p>
+        <a data-no-turbolink='true' href= "/join" class="btn btn-primary btn-lg btn-block">加入我们</a>
+      </div>
+    <% end -%>
   </div>
   <!-- <div class="about-content-1">
     <div class="container">

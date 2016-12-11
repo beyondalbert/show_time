@@ -1,17 +1,29 @@
 <div class="join-head">
-  <%= image_tag "join_01.jpg", class: "img-responsive center-block about-head" %>
-  <div class="join-desc visible-lg-block col-sm-4">
-    <p>草木百年新雨露</p>
-    <p>车书万里旧江山</p>
-    <p>----创新</p>
-    <p>众人拾柴火焰高</p>
-    <p>----团队协作</p>
-    <p>我们需要这样的你！</p>
-    <p>加入我们让自己变得与众不同！</p>
-    <div class="join-mail">
-      <p>联系邮箱： hr@zhikuntech.com</p>
+  <% if @join_us_cover %>
+    <%= image_tag @join_us_cover.content.url, class: "img-responsive center-block about-head" %>
+    <div class="join-desc visible-lg-block col-sm-4">
+      <% @join_us_cover.description.split(';').each do |d| %>
+        <p><%= d %></p>
+      <% end -%>
+      <div class="join-mail">
+        <p>联系邮箱： hr@zhikuntech.com</p>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <%= image_tag "join_us_default.jpg", class: "img-responsive center-block about-head" %>
+    <div class="join-desc visible-lg-block col-sm-4">
+      <p>草木百年新雨露</p>
+      <p>车书万里旧江山</p>
+      <p>----创新</p>
+      <p>众人拾柴火焰高</p>
+      <p>----团队协作</p>
+      <p>我们需要这样的你！</p>
+      <p>加入我们让自己变得与众不同！</p>
+      <div class="join-mail">
+        <p>联系邮箱： hr@zhikuntech.com</p>
+      </div>
+    </div>
+  <% end -%>
   <div class="join-desc-phone hidden-lg">
     <div class="join-mail">
       <p>联系邮箱： hr@zhikuntech.com</p>
@@ -22,20 +34,26 @@
   <div class="jobs-head col-sm-12">
     <h2>招聘岗位</h2>
   </div>
-  <% @jobs.each do |j| %>
+  <% if @jobs.empty? %>
     <div class="col-sm-6">
-      <div class="panel panel-default jobs-item">
-        <div class="panel-heading">
-          <%= "[" + (j.status == 1 ? '正在热招' : '招聘结束') + "]" + j.title %>
-        </div>
-        <div class="panel-body">
-          <h4>岗位职责</h4>
-          <% j.requirements.each do |r| %>
-            <p><%= r %></p>
-          <% end -%>
+      <p>暂无招聘职位</p>
+    </div>
+  <% else %>
+    <% @jobs.each do |j| %>
+      <div class="col-sm-6">
+        <div class="panel panel-default jobs-item">
+          <div class="panel-heading">
+            <%= "[" + (j.status == 1 ? '正在热招' : '招聘结束') + "]" + j.title %>
+          </div>
+          <div class="panel-body">
+            <h4>岗位职责</h4>
+            <% j.requirements.each do |r| %>
+              <p><%= r %></p>
+            <% end -%>
+          </div>
         </div>
       </div>
-    </div>
+    <% end -%>
   <% end -%>
 </div>
 <script>

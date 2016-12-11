@@ -9,7 +9,13 @@
 	<div class="form-group">
     <label class="col-sm-2 control-label">描述：</label>
     <div class="col-sm-8">
-      <%= text_field_tag 'picture[description]', '', placeholder: '图片的简短描述', class: "form-control" %>
+      <%= text_area_tag 'picture[description]', '', placeholder: '图片的简短描述', class: "form-control", rows: 5 %>
+    </div>
+  </div>
+	<div class="form-group">
+    <label class="col-sm-2 control-label">图片类型：</label>
+    <div class="col-sm-3">
+      <%= select_tag 'picture[pic_type]', options_for_select(Picture.type_array), class: 'form-control'%>
     </div>
   </div>
   <div class="form-group">

@@ -5,13 +5,15 @@ class HomeController < ApplicationController
 
     @videos = Video.last(3)
 
-    @pictures = Picture.last(5)
+    @pictures = Picture.where(pic_type: 1).last(5)
   end
 
   def about
+    @about_us_cover = Picture.about_us_cover
   end
 
   def join
     @jobs = Job.where(status: 1)
+    @join_us_cover = Picture.join_us_cover
   end
 end

@@ -1,14 +1,19 @@
 <h1 class="page-header">
-  轮播图列表
-  <%= link_to "新建轮播图", new_admin_picture_path, 'data-no-turbolink' => true %>
+  网站图片列表
+  <%= link_to "新建网站图片", new_admin_picture_path, 'data-no-turbolink' => true %>
 </h1>
+
+<div class="setting-desc">
+  <p>包括轮播图设置，关于我们封面图设置，加入我们封面图设置，精彩视频封面图设置</p>
+</div>
 
 <table class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
       <th>标题</th>
-      <th>视频封面</th>
+      <th>类型</th>
+      <th>图片内容</th>
       <th>描述</th>
       <th>操作</th>
     </tr>

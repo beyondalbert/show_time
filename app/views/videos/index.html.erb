@@ -4,9 +4,15 @@
 } 
 </style>
 <div class="video-head">
-  <%= image_tag 'video_00.jpg', class: "img-responsive" %>
-  <h2>精彩视频</h2>
-  <p>桥梁检测精彩瞬间，智鹍与你分享。</p>
+  <% if @video_cover %>
+    <%= image_tag @video_cover.content.url, class: "img-responsive" %>
+    <h2><%= @video_cover.title %></h2>
+    <p><%= @video_cover.description %></p>
+  <% else %>
+    <%= image_tag 'video_cover_default.jpg', class: "img-responsive" %>
+    <h2>精彩视频</h2>
+    <p>桥梁检测精彩瞬间，智鹍与你分享。</p>
+  <% end -%>
 </div>
 <div class="video-body row">
   <% @videos.each do |v| %>
