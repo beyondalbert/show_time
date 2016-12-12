@@ -26,22 +26,31 @@
     <h2>商业应用</h2>
   </div>
   <div class="row commercial-app">
-    <div class="col-sm-6">
-      <%= image_tag "app_01.jpg", class: "img-responsive center-block" %>
-      <p class="content">无人机桥梁检测</p>
-    </div>
-    <div class="col-sm-6">
-      <%= image_tag "app_02.jpg", class: "img-responsive center-block" %>
-      <p class="content">警务执法</p>
-    </div>
-    <div class="col-sm-6">
-      <%= image_tag "app_03.jpg", class: "img-responsive center-block" %>
-      <p class="content">测绘/3D建模</p>
-    </div>
-    <div class="col-sm-6">
-      <%= image_tag "app_04.jpg", class: "img-responsive center-block" %>
-      <p class="content">航拍</p>
-    </div>
+    <% unless @business_cover.empty? %>
+      <% Picture.business_cover.each do |p| %>
+        <div class="col-sm-6">
+          <%= image_tag p.content.url, class: "img-responsive center-block" %>
+          <p class="content"><%= p.title %></p>
+        </div>
+      <% end -%>
+    <% else %>
+      <div class="col-sm-6">
+        <%= image_tag "app_default_01.jpg", class: "img-responsive center-block" %>
+        <p class="content">无人机桥梁检测</p>
+      </div>
+      <div class="col-sm-6">
+        <%= image_tag "app_default_02.jpg", class: "img-responsive center-block" %>
+        <p class="content">警务执法</p>
+      </div>
+      <div class="col-sm-6">
+        <%= image_tag "app_default_03.jpg", class: "img-responsive center-block" %>
+        <p class="content">测绘/3D建模</p>
+      </div>
+      <div class="col-sm-6">
+        <%= image_tag "app_default_04.jpg", class: "img-responsive center-block" %>
+        <p class="content">航拍</p>
+      </div>
+    <% end -%>
   </div>
 </div>
 

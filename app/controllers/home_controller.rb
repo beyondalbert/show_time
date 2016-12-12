@@ -8,6 +8,8 @@ class HomeController < ApplicationController
     @videos = Video.last(3)
 
     @pictures = Picture.where(pic_type: 1).last(5)
+
+    @business_cover = Picture.business_cover
   end
 
   def about
