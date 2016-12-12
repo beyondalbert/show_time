@@ -6,4 +6,12 @@ class Page < ActiveRecord::Base
       nil
     end
   end
+
+  def children
+    unless self.parent_id
+      Page.where(parent_id: self.id)
+    else
+      []
+    end
+  end
 end

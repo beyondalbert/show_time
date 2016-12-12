@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :activities
   get 'videos/index'
+  resources :pages
 
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"

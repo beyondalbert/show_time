@@ -1,7 +1,6 @@
-class VideosController < ApplicationController
-  def index
-    @videos = Video.all
-    @video_cover = Picture.video_cover
+class PagesController < ApplicationController
+  def show
+    @page = Page.find(params[:id])
 
     @parent_pages = Page.where(parent_id: nil)
     @page_hash = []
