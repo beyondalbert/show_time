@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :pictures
     resources :jobs
     resources :pages
+    resources :feedbacks
   end
 
   root :to => "home#index" 
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   resources :activities
   get 'videos/index'
   resources :pages
+  resources :feedbacks
 
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"

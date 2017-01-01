@@ -1,0 +1,17 @@
+<h1 class="page-header">
+  反馈列表
+</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>手机</th>
+      <th>反馈内容</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<%= render partial: 'feedbacks', locals: {feedbacks: @feedbacks} %>
+  </tbody>
+</table>

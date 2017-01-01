@@ -63,3 +63,8 @@
   float: right;
 }
 
+.flash-div {
+  position: fixed;
+  top: 2px;
+  z-index: 9999;
+}

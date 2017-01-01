@@ -9,6 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body style="margin: 0px;">
+  <div class="flash-msg row" style="margin-left: 0px;margin-right: 0px;">
+    <div class="alert alert-dismissible col-md-offset-4 col-md-4 col-xs-12 flash-div" role="alert" style="display: none;">
+      <button class="close" type="button" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">关闭</span>
+      </button>
+    </div>
+  </div>
+
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -53,6 +62,7 @@
           <li class="<%= params[:controller] == 'admin/activities' ? 'active' : ''%>"><a href="/admin/activities">新闻设置</a></li>
           <li class="<%= params[:controller] == 'admin/jobs' ? 'active' : ''%>"><a href="/admin/jobs">招聘岗位设置</a></li>
           <li class="<%= params[:controller] == 'admin/pages' ? 'active' : ''%>"><a href="/admin/pages">常规页面设置</a></li>
+          <li class="<%= params[:controller] == 'admin/feedbacks' ? 'active' : ''%>"><a href="/admin/feedbacks">反馈列表</a></li>
           <li><a href="">微信公众号集成</a></li>
         </ul>
       </div>
@@ -61,5 +71,23 @@
 			</div>
 		</div>
 	</div>
+  <script type='text/javascript'>
+    <% if flash.first %>
+      var flashType = "<%= flash.first[0] %>";
+      var flashContent = "<%= flash.first[1] %>"
+      var type = '';
+      switch(flashType) {
+        case 'alert':
+          type = 'alert-danger';
+          break;
+        case 'success':
+          type = 'alert-success';
+          break;
+        default:
+          type = 'alert-danger';
+      }
+      show_flash_msg(flashContent, type);
+    <% end %>
+  </script>
 </body>
 </html>

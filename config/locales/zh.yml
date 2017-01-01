@@ -1,0 +1,11 @@
+zh:
+  activerecord:
+    attributes:
+      feedback:
+        email: 'email'
+    errors:
+      models:
+        feedback:
+          attributes:
+            email:
+              blank: '不能为空'
