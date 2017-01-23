@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :jobs
     resources :pages
     resources :feedbacks
+    delete 'basic_infos/delete_pic'
+    resources :basic_infos
   end
 
   root :to => "home#index" 

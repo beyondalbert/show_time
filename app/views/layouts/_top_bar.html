@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">智鹍科技</a>
+      <a class="navbar-brand" href="/"><%= @basic_info.logo_rectangle ? (image_tag @basic_info.logo_rectangle.url(:medium), style: 'margin-top: -15px') : @basic_info.name %></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101102515) do
+ActiveRecord::Schema.define(version: 20170115071424) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title",                limit: 255
@@ -24,6 +24,25 @@ ActiveRecord::Schema.define(version: 20170101102515) do
     t.string   "picture_content_type", limit: 255
     t.integer  "picture_file_size",    limit: 4
     t.datetime "picture_updated_at"
+  end
+
+  create_table "basic_infos", force: :cascade do |t|
+    t.string   "name",                        limit: 255
+    t.string   "icp",                         limit: 255
+    t.string   "logo_square_file_name",       limit: 255
+    t.string   "logo_square_content_type",    limit: 255
+    t.integer  "logo_square_file_size",       limit: 4
+    t.datetime "logo_square_updated_at"
+    t.string   "logo_rectangle_file_name",    limit: 255
+    t.string   "logo_rectangle_content_type", limit: 255
+    t.integer  "logo_rectangle_file_size",    limit: 4
+    t.datetime "logo_rectangle_updated_at"
+    t.string   "wx_qr_code_file_name",        limit: 255
+    t.string   "wx_qr_code_content_type",     limit: 255
+    t.integer  "wx_qr_code_file_size",        limit: 4
+    t.datetime "wx_qr_code_updated_at"
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

@@ -1,4 +1,6 @@
 class ActivitiesController < ApplicationController
+  before_filter :find_pages
+
   def index
   end
 

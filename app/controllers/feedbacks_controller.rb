@@ -1,5 +1,5 @@
 class FeedbacksController < ApplicationController
-  before_filter :find_pages
+  before_filter :find_pages, :find_basic_info
 
   def new
   end
