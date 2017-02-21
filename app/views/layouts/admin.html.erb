@@ -55,7 +55,7 @@
         <ul class="nav nav-sidebar">
           <li class="<%= params[:controller] == 'admin/dashboard' ? 'active' : ''%>"><a href="/admin/dashboard/index">网站信息设置</a></li>
           <li class="<%= params[:controller] == 'admin/pictures' ? 'active' : ''%>"><a href="/admin/pictures">网站图片设置</a></li>
-          <li><a href="#">首页产品内容设置</a></li>
+          <li class="<%= params[:controller] == 'admin/function_modules' ? 'active' : ''%>"><a href="/admin/function_modules">首页功能块设置</a></li>
           <li class="<%= params[:controller] == 'admin/videos' ? 'active' : ''%>"><a href="/admin/videos">精彩视频设置</a></li>
         </ul>
         <ul class="nav nav-sidebar">

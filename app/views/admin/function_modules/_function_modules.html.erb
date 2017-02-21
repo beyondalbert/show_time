@@ -1,0 +1,12 @@
+<% function_modules.each do |fm| %>
+	<tr>
+    <td class="fm-id"><%= fm.id %></td>
+    <td class="fm-name"><%= fm.name %></td>
+    <td class="fm-is-display" data-value="<%=fm.is_display%>"><%= fm.is_display ? "是" : "否" %></td>
+    <td>
+    	<%= link_to('#', class: 'fm-edit-a' ) do %>
+      	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+    	<% end %>
+    </td>
+  </tr>
+<%- end %>

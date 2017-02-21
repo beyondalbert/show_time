@@ -14,12 +14,14 @@ class Picture < ActiveRecord::Base
       "精彩视频封面"
     when 5
       "商业应用"
+    when 6
+      "精彩活动封面"
     end
   end
 
   def self.type_array
     [["轮播图", 1], ["关于我们封面", 2], ["加入我们封面", 3], 
-     ["精彩视频封面", 4], ["商业应用", 5]]
+     ["精彩视频封面", 4], ["商业应用", 5], ["精彩活动封面", 6]]
   end
 
   def self.join_us_cover
@@ -32,6 +34,10 @@ class Picture < ActiveRecord::Base
 
   def self.video_cover
     Picture.where(pic_type: 4).last
+  end
+
+  def self.activity_cover
+    Picture.where(pic_type: 6).last
   end
 
   def self.business_cover

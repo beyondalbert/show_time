@@ -1,2 +1,21 @@
-<h1>Activities#index</h1>
-<p>Find me in app/views/activities/index.html.erb</p>
+<div class="activity-head">
+  <% if @activity_cover %>
+    <%= image_tag @activity_cover.content.url, class: "img-responsive" %>
+    <h2><%= @activity_cover.title %></h2>
+    <p><%= @activity_cover.description %></p>
+  <% else %>
+    <%= image_tag 'activity_cover_default.jpg', class: "img-responsive" %>
+    <h2>精彩活动</h2>
+    <p>精彩活动，与您分享～</p>
+  <% end -%>
+</div>
+<div class="activity-body row">
+  <% @activities.each do |a| %>
+    <div class="col-md-4 text-center">
+      <div class="activity-box">
+        <%= image_tag a.picture.url, class: "img-responsive center-block" %>
+        <span><%= link_to a.title, activity_path(a.id) %></span>
+      </div>
+    </div>
+  <% end -%>
+</div>

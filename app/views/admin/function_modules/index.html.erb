@@ -1,0 +1,77 @@
+<h1 class="page-header">
+  首页功能块设置
+</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>名称</th>
+      <th>是否在首页显示</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody id="fm-list">
+  	<%= render partial: 'function_modules', locals: {function_modules: @function_modules} %>
+  </tbody>
+</table>
+
+
+<div id="fm-edit-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑功能块</h4>
+      </div>
+      <div class="modal-body">
+        <form id="fm-edit-form" class="form-horizontal">
+        	<div class="form-group">
+            <label class="col-sm-3 control-label">标题：</label>
+            <div class="col-sm-7">
+              <%= text_field_tag 'function_module[name]', '', placeholder: '功能块名字', class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">是否在主页显示：</label>
+            <div class="col-sm-7">
+              <%= select_tag 'function_module[is_display]', options_for_select([['是', true], ['否', false]]), include_blank: false, class: 'form-control'%>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-7">
+              <%=link_to '保存', '#', class: 'btn btn-default', id: 'fm-edit-btn' %>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+$(document).on('click', '.fm-edit-a', function() {
+  $('#fm-edit-modal').modal();
+  $('#function_module_name').val($(this).parent().parent().find('.fm-name').text()); 
+  $('#function_module_is_display').val($(this).parent().parent().find('.fm-is-display').data('value') + '');
+  $('#fm-edit-btn').data('id', $(this).parent().parent().find('.fm-id').text());
+})
+$('#fm-edit-btn').click(function() {
+  $.ajax({
+    url: '/admin/function_modules/' + $(this).data('id'),
+    type: 'PUT',
+    data: $('#fm-edit-form').serialize(),
+    success: function(data, textStatus, jqXHR) {
+      console.log('success!');
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.log('failed!');
+    }
+  })
+})
+</script>

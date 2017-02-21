@@ -7,3 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 BasicInfo.create!(name: '秀探科技', icp: '浙ICP备xxxxxxxx号-x')
+FunctionModule.create!(name: '商业应用', is_display: true)
+FunctionModule.create!(name: '精彩视频', is_display: true)
+FunctionModule.create!(name: '精彩活动', is_display: true)

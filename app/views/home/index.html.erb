@@ -74,6 +74,7 @@
 <div class="floor-bottom">
   <div class="floor-head" style="text-align: left;margin-bottom: 10px;">
     <h2>精彩活动</h2>
+    <a data-no-turbolink='true' href="/activities">查看更多活动 &gt;</a>
   </div>
   <% if @last_activity %>
     <div class="row">
@@ -102,7 +103,7 @@
         </ul>
         <ul class="activities-list hidden-lg" style="padding-left: 0px;">
           <% @activities.each do |a| %>
-            <li><%= link_to truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25), activity_path(a.id) %>/li>
+            <li><%= link_to truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25), activity_path(a.id) %></li>
           <%- end %>
         </ul>
       </div>

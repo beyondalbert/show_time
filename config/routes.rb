@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :feedbacks
     delete 'basic_infos/delete_pic'
     resources :basic_infos
+    resources :function_modules
   end
 
   root :to => "home#index" 

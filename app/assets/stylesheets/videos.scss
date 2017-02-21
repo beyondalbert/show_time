@@ -5,3 +5,24 @@
 .video-head {
   text-align: center;
 }
+
+.video-pic {
+  cursor: pointer;
+}
+
+.video-box {
+  position: relative;
+  margin: 10px 0px 10px 0px;
+  display: inline-block;
+  text-align: center;
+}
+
+.video-box span {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: block;
+  color: white;
+  margin-top: -30px;
+  height: 30px;
+  line-height: 30px;
+}

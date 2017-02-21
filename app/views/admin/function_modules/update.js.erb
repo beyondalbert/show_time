@@ -1,0 +1,3 @@
+$('#fm-list').html("<%= escape_javascript(render partial: 'function_modules', locals: {function_modules: @function_modules})%>");
+$('#fm-edit-modal').modal('toggle');
+show_flash_msg('更新成功！', "alert-success");
