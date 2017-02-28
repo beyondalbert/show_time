@@ -10,6 +10,10 @@ class HomeController < ApplicationController
     @pictures = Picture.where(pic_type: 1).last(5)
 
     @business_cover = Picture.business_cover
+
+    @function_module_first = FunctionModule.find(1)
+    @function_module_second = FunctionModule.find(2)
+    @function_module_third = FunctionModule.find(3)
   end
 
   def about

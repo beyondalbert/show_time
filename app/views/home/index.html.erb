@@ -21,59 +21,64 @@
   <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div><!-- /.carousel -->
 
-<div class="floor">
-  <div class="floor-head">
-    <h2>商业应用</h2>
-  </div>
-  <div class="row commercial-app">
-    <% unless @business_cover.empty? %>
-      <% Picture.business_cover.each do |p| %>
+<% if @function_module_first.is_display %>
+  <div class="floor">
+    <div class="floor-head">
+      <h2><%= @function_module_first.name %></h2>
+    </div>
+    <div class="row commercial-app">
+      <% unless @business_cover.empty? %>
+        <% Picture.business_cover.each do |p| %>
+          <div class="col-sm-6">
+            <%= image_tag p.content.url, class: "img-responsive center-block" %>
+            <p class="content"><%= p.title %></p>
+          </div>
+        <% end -%>
+      <% else %>
         <div class="col-sm-6">
-          <%= image_tag p.content.url, class: "img-responsive center-block" %>
-          <p class="content"><%= p.title %></p>
+          <%= image_tag "app_default_01.jpg", class: "img-responsive center-block" %>
+          <p class="content">无人机桥梁检测</p>
+        </div>
+        <div class="col-sm-6">
+          <%= image_tag "app_default_02.jpg", class: "img-responsive center-block" %>
+          <p class="content">警务执法</p>
+        </div>
+        <div class="col-sm-6">
+          <%= image_tag "app_default_03.jpg", class: "img-responsive center-block" %>
+          <p class="content">测绘/3D建模</p>
+        </div>
+        <div class="col-sm-6">
+          <%= image_tag "app_default_04.jpg", class: "img-responsive center-block" %>
+          <p class="content">航拍</p>
         </div>
       <% end -%>
-    <% else %>
-      <div class="col-sm-6">
-        <%= image_tag "app_default_01.jpg", class: "img-responsive center-block" %>
-        <p class="content">无人机桥梁检测</p>
-      </div>
-      <div class="col-sm-6">
-        <%= image_tag "app_default_02.jpg", class: "img-responsive center-block" %>
-        <p class="content">警务执法</p>
-      </div>
-      <div class="col-sm-6">
-        <%= image_tag "app_default_03.jpg", class: "img-responsive center-block" %>
-        <p class="content">测绘/3D建模</p>
-      </div>
-      <div class="col-sm-6">
-        <%= image_tag "app_default_04.jpg", class: "img-responsive center-block" %>
-        <p class="content">航拍</p>
-      </div>
-    <% end -%>
+    </div>
   </div>
-</div>
+<% end %>
 
-<div class="floor">
-  <div class="floor-head">
-    <h2>精彩视频</h2>
-    <a data-no-turbolink='true' href="/videos/index">查看更多视频 &gt;</a>
-  </div>
-  <div class="row text-center">
-    <% @videos.each do |v| %>
-      <div class="col-md-4">
-        <div class="video-box">
-          <%= image_tag v.cover.url, 'data-src' => v.url, class: "img-responsive center-block video-pic" %>
-          <span><%= v.title %></span>
+<% if @function_module_second.is_display %>
+  <div class="floor">
+    <div class="floor-head">
+      <h2><%= @function_module_second.name %></h2>
+      <a data-no-turbolink='true' href="/videos/index">查看更多视频 &gt;</a>
+    </div>
+    <div class="row text-center">
+      <% @videos.each do |v| %>
+        <div class="col-md-4">
+          <div class="video-box">
+            <%= image_tag v.cover.url, 'data-src' => v.url, class: "img-responsive center-block video-pic" %>
+            <span><%= v.title %></span>
+          </div>
         </div>
-      </div>
-    <% end -%>
+      <% end -%>
+    </div>
   </div>
-</div>
+<% end %>
 
+<% if @function_module_third.is_display %>
 <div class="floor-bottom">
   <div class="floor-head" style="text-align: left;margin-bottom: 10px;">
-    <h2>精彩活动</h2>
+    <h2><%= @function_module_third.name %></h2>
     <a data-no-turbolink='true' href="/activities">查看更多活动 &gt;</a>
   </div>
   <% if @last_activity %>
@@ -110,6 +115,7 @@
     </div>
   <%- end %>
 </div>
+<% end %>
 
 <div id="video-show" class="modal fade">
   <div class="modal-dialog">
