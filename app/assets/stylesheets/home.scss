@@ -109,13 +109,16 @@
 /*
  *商业应用 内容调整
  */
-.col-sm-6 .content {
-  position: absolute;       //title 显示
-  left: 350px;
-  bottom: 5px;
+.bc-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;       //title 显示
+  bottom: 32px;
   color: white;             //设置字体
   font-size: 16px;
   text-align: center;
+  width: 40%;
+  float: right;
+  padding: 5px;
 }
 
 /*

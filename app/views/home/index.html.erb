@@ -31,25 +31,25 @@
         <% Picture.business_cover.each do |p| %>
           <div class="col-sm-6">
             <%= image_tag p.content.url, class: "img-responsive center-block" %>
-            <p class="content"><%= p.title %></p>
+            <p class="bc-title"><%= p.title %></p>
           </div>
         <% end -%>
       <% else %>
         <div class="col-sm-6">
           <%= image_tag "app_default_01.jpg", class: "img-responsive center-block" %>
-          <p class="content">无人机桥梁检测</p>
+          <p class="bc-title">无人机桥梁检测</p>
         </div>
         <div class="col-sm-6">
           <%= image_tag "app_default_02.jpg", class: "img-responsive center-block" %>
-          <p class="content">警务执法</p>
+          <p class="bc-title">警务执法</p>
         </div>
         <div class="col-sm-6">
           <%= image_tag "app_default_03.jpg", class: "img-responsive center-block" %>
-          <p class="content">测绘/3D建模</p>
+          <p class="bc-title">测绘/3D建模</p>
         </div>
         <div class="col-sm-6">
           <%= image_tag "app_default_04.jpg", class: "img-responsive center-block" %>
-          <p class="content">航拍</p>
+          <p class="bc-title">航拍</p>
         </div>
       <% end -%>
     </div>
