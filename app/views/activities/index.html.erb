@@ -1,10 +1,10 @@
 <div class="activity-head">
   <% if @activity_cover %>
-    <%= image_tag @activity_cover.content.url, class: "img-responsive" %>
+    <%= image_tag @activity_cover.content.url, class: "img-responsive center-block" %>
     <h2><%= @activity_cover.title %></h2>
     <p><%= @activity_cover.description %></p>
   <% else %>
-    <%= image_tag 'activity_cover_default.jpg', class: "img-responsive" %>
+    <%= image_tag 'activity_cover_default.jpg', class: "img-responsive center-block" %>
     <h2>精彩活动</h2>
     <p>精彩活动，与您分享～</p>
   <% end -%>

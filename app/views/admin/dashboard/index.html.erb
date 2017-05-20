@@ -20,7 +20,7 @@
       </div>
       <div class="col-sm-3">
         <%= file_field_tag "basic_info[logo_square]", class: "form-control" %>
-        <%= link_to '删除图片', '/admin/basic_infos/delete_pic?id=' + @basic_info.id.to_s + '&target=logo_square', method: :delete %>
+        <%= link_to_if @basic_info.logo_square.exists?, '删除图片', '/admin/basic_infos/delete_pic?id=' + @basic_info.id.to_s + '&target=logo_square', method: :delete %>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
       </div>
       <div class="col-sm-3">
         <%= file_field_tag "basic_info[logo_rectangle]", class: "form-control" %>
-        <%= link_to '删除图片', '/admin/basic_infos/delete_pic?id=' + @basic_info.id.to_s + '&target=logo_rectangle', method: :delete %>
+        <%= link_to_if @basic_info.logo_rectangle.exists?, '删除图片', '/admin/basic_infos/delete_pic?id=' + @basic_info.id.to_s + '&target=logo_rectangle', method: :delete %>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
       </div>
       <div class="col-sm-3">
         <%= file_field_tag "basic_info[wx_qr_code]", class: "form-control" %>
-        <%= link_to '删除图片', '/admin/basic_infos/delete_pic?id=' + @basic_info.id.to_s + '&target=wx_qr_code', method: :delete %>
+        <%= link_to_if @basic_info.wx_qr_code.exists?, '删除图片', '/admin/basic_infos/delete_pic?id=' + @basic_info.id.to_s + '&target=wx_qr_code', method: :delete %>
       </div>
     </div>
   </div>

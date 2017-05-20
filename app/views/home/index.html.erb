@@ -5,16 +5,46 @@
     <li data-target="#myCarousel" data-slide-to="2" class=""></li>
   </ol>
   <div class="carousel-inner">
-    <% @pictures.each.with_index do |p, index| %>
-      <div class="item <%= index == 0 ? 'active' : ''%>">
-        <%= image_tag p.content.url, style: "margin: 0 auto;" %>
+    <% if @pictures.empty? %>
+      <div class="item active">
+        <%= image_tag 'slide_default_01.png', style: "margin: 0 auto;" %>
         <div class="container visible-lg-block">
           <div class="carousel-caption">
-            <h1><%= p.title %></h1>
-            <p><%= p.description %></p>
+            <h1>第一张轮播图</h1>
+            <p>可以在后台进行自定义设置</p>
           </div>
         </div>
       </div>
+      <div class="item">
+        <%= image_tag 'slide_default_02.png', style: "margin: 0 auto;" %>
+        <div class="container visible-lg-block">
+          <div class="carousel-caption">
+            <h1>第二张轮播图</h1>
+            <p>可以在后台进行自定义设置</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "slide_default_03.png", style: "margin: 0 auto;" %>
+        <div class="container visible-lg-block">
+          <div class="carousel-caption">
+            <h1>第三张轮播图</h1>
+            <p>可以在后台进行自定义设置</p>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <% @pictures.each.with_index do |p, index| %>
+        <div class="item <%= index == 0 ? 'active' : ''%>">
+          <%= image_tag p.content.url, style: "margin: 0 auto;" %>
+          <div class="container visible-lg-block">
+            <div class="carousel-caption">
+              <h1><%= p.title %></h1>
+              <p><%= p.description %></p>
+            </div>
+          </div>
+        </div>
+      <% end -%>
     <% end -%>
   </div>
   <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -30,26 +60,26 @@
       <% unless @business_cover.empty? %>
         <% Picture.business_cover.each do |p| %>
           <div class="col-sm-6">
-            <%= image_tag p.content.url, class: "img-responsive center-block" %>
+            <%= image_tag p.content.url, class: "img-responsive center-block", alt: p.title %>
             <p class="bc-title"><%= p.title %></p>
           </div>
         <% end -%>
       <% else %>
         <div class="col-sm-6">
-          <%= image_tag "app_default_01.jpg", class: "img-responsive center-block" %>
-          <p class="bc-title">无人机桥梁检测</p>
+          <%= image_tag "app_default_01.jpg", class: "img-responsive center-block", alt: "示例图片1" %>
+          <p class="bc-title">示例图片1</p>
         </div>
         <div class="col-sm-6">
-          <%= image_tag "app_default_02.jpg", class: "img-responsive center-block" %>
-          <p class="bc-title">警务执法</p>
+          <%= image_tag "app_default_02.jpg", class: "img-responsive center-block", alt: "示例图片2"  %>
+          <p class="bc-title">示例图片2</p>
         </div>
         <div class="col-sm-6">
-          <%= image_tag "app_default_03.jpg", class: "img-responsive center-block" %>
-          <p class="bc-title">测绘/3D建模</p>
+          <%= image_tag "app_default_03.jpg", class: "img-responsive center-block", alt: "示例图片3"  %>
+          <p class="bc-title">示例图片3</p>
         </div>
         <div class="col-sm-6">
-          <%= image_tag "app_default_04.jpg", class: "img-responsive center-block" %>
-          <p class="bc-title">航拍</p>
+          <%= image_tag "app_default_04.jpg", class: "img-responsive center-block", alt: "示例图片4"  %>
+          <p class="bc-title">示例图片4</p>
         </div>
       <% end -%>
     </div>
@@ -63,58 +93,64 @@
       <a data-no-turbolink='true' href="/videos/index">查看更多视频 &gt;</a>
     </div>
     <div class="row text-center">
-      <% @videos.each do |v| %>
-        <div class="col-md-4">
-          <div class="video-box">
-            <%= image_tag v.cover.url, 'data-src' => v.url, class: "img-responsive center-block video-pic" %>
-            <span><%= v.title %></span>
+      <% if @videos.empty? %>
+        <p style="text-align: center;">宣传视频内容可以在后台 精彩视频设置 中进行设置！</p>
+      <% else %>
+        <% @videos.each do |v| %>
+          <div class="col-md-4">
+            <div class="video-box">
+              <%= image_tag v.cover.url, 'data-src' => v.url, class: "img-responsive center-block video-pic" %>
+              <span><%= v.title %></span>
+            </div>
           </div>
-        </div>
-      <% end -%>
+        <% end -%>
+      <% end %>
     </div>
   </div>
 <% end %>
 
 <% if @function_module_third.is_display %>
-<div class="floor-bottom">
-  <div class="floor-head" style="text-align: left;margin-bottom: 10px;">
-    <h2><%= @function_module_third.name %></h2>
-    <a data-no-turbolink='true' href="/activities">查看更多活动 &gt;</a>
-  </div>
-  <% if @last_activity %>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-8">
-            <%= image_tag @last_activity.picture.url(:medium), class: "img-responsive center-block" %>
-          </div>
-          <div class="col-md-4 last-activity-head">
-            <div class="visible-lg-block">
-              <p><%= @last_activity.happen_time.year %></p>
-              <p style="font-size: 40px;color: #000;margin-bottom: 20px; "><%= @last_activity.happen_time.strftime("%m | %d") %></p>
-              <p><%= link_to truncate(@last_activity.title, length: 6), activity_path(@last_activity.id)%></p>
+  <div class="floor-bottom">
+    <div class="floor-head" style="text-align: center;">
+      <h2><%= @function_module_third.name %></h2>
+      <a data-no-turbolink='true' href="/activities">查看更多活动 &gt;</a>
+    </div>
+    <% if @last_activity %>
+      <div class="row">
+        <div class="col-md-6" style="margin-top: 30px;">
+          <div class="row">
+            <div class="col-md-8">
+              <%= image_tag @last_activity.picture.url, class: "img-responsive center-block" %>
             </div>
-            <div class="hidden-lg" style="text-align: center;">
-              <p><%= link_to truncate(@last_activity.title, length: 6), activity_path(@last_activity.id)%></p>
+            <div class="col-md-4 last-activity-head">
+              <div class="visible-lg-block">
+                <p><%= @last_activity.happen_time.year %></p>
+                <p style="font-size: 40px;color: #000;margin-bottom: 20px; "><%= @last_activity.happen_time.strftime("%m | %d") %></p>
+                <p><%= link_to truncate(@last_activity.title, length: 6), activity_path(@last_activity.id), title: @last_activity.title%> </p>
+              </div>
+              <div class="hidden-lg" style="text-align: center;">
+                <p><%= link_to truncate(@last_activity.title, length: 6), activity_path(@last_activity.id), title: @last_activity.title %></p>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-md-6" style="margin-top: 30px;">
+          <ul class="activities-list visible-lg-block" style="padding-left: 0px;">
+            <% @activities.each do |a| %>
+              <li><%= link_to truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 35), activity_path(a.id), title: a.title %></li>
+            <%- end %>
+          </ul>
+          <ul class="activities-list hidden-lg" style="padding-left: 0px;">
+            <% @activities.each do |a| %>
+              <li><%= link_to truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25), activity_path(a.id), title: a.title %></li>
+            <%- end %>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-6">
-        <ul class="activities-list visible-lg-block" style="padding-left: 0px;">
-          <% @activities.each do |a| %>
-            <li><%= link_to a.happen_time.strftime("%F") + " | " + a.title, activity_path(a.id) %></li>
-          <%- end %>
-        </ul>
-        <ul class="activities-list hidden-lg" style="padding-left: 0px;">
-          <% @activities.each do |a| %>
-            <li><%= link_to truncate(a.happen_time.strftime("%F") + " | " + a.title, length: 25), activity_path(a.id) %></li>
-          <%- end %>
-        </ul>
-      </div>
-    </div>
-  <%- end %>
-</div>
+    <% else %>
+      <p style="text-align: center;">新闻或活动内容可以在后台新闻设置处动态添加，首页显示最新的3次活动链接。</p>
+    <% end -%>
+  </div>
 <% end %>
 
 <div id="video-show" class="modal fade">

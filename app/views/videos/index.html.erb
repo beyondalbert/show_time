@@ -1,10 +1,10 @@
 <div class="video-head">
   <% if @video_cover %>
-    <%= image_tag @video_cover.content.url, class: "img-responsive" %>
+    <%= image_tag @video_cover.content.url, class: "img-responsive center-block" %>
     <h2><%= @video_cover.title %></h2>
     <p><%= @video_cover.description %></p>
   <% else %>
-    <%= image_tag 'video_cover_default.jpg', class: "img-responsive" %>
+    <%= image_tag 'video_cover_default.jpg', class: "img-responsive center-block" %>
     <h2>精彩视频</h2>
     <p>精彩视频，与你分享～</p>
   <% end -%>

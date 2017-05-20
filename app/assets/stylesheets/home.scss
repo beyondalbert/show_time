@@ -22,12 +22,11 @@
 
 .floor-bottom {
   border-bottom: 1px solid #bbb;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .commercial-app .col-sm-6 {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .about-page p {
@@ -111,13 +110,13 @@
  */
 .bc-title {
   background-color: rgba(0, 0, 0, 0.5);
-  position: relative;       //title 显示
-  bottom: 32px;
+  position: absolute;       //title 显示
+  bottom: -10px;
+  right: 15px;
   color: white;             //设置字体
   font-size: 16px;
   text-align: center;
   width: 40%;
-  float: right;
   padding: 5px;
 }
 

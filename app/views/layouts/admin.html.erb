@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%= favicon_link_tag 'logo.jpg' %>
+  <%= favicon_link_tag @basic_info.logo_square.url(:thumb) %>
   <%= csrf_meta_tags %>
 </head>
 <body style="margin: 0px;">
@@ -63,7 +63,7 @@
           <li class="<%= params[:controller] == 'admin/jobs' ? 'active' : ''%>"><a href="/admin/jobs">招聘岗位设置</a></li>
           <li class="<%= params[:controller] == 'admin/pages' ? 'active' : ''%>"><a href="/admin/pages">常规页面设置</a></li>
           <li class="<%= params[:controller] == 'admin/feedbacks' ? 'active' : ''%>"><a href="/admin/feedbacks">反馈列表</a></li>
-          <li><a href="">微信公众号集成</a></li>
+          <li><!-- <a href="">微信公众号集成</a> --></li>
         </ul>
       </div>
       <div class="col-sm-9 col-md-10 main">
